@@ -28,7 +28,7 @@ twitter_username: languelab
 github_username:  languel
 
 # Build settings
-theme: Slate
+theme: minima
 plugins:
   - jekyll-feed
 
