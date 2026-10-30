@@ -10,22 +10,24 @@
 @media(prefers-color-scheme:dark){:root{--bg:#141417;--fg:#c4c4c8;--mu:#8e8e96;--bd:#2f2f37;--ac:#fff;--card:#1c1c21}}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--fg);font:16.5px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif}
-main{max-width:760px;margin:0 auto;padding:40px 16px 80px}
-h1{font-size:30px;margin:0 0 2px;letter-spacing:-.01em}
-h2{font:600 13px/1 -apple-system,system-ui,sans-serif;text-transform:uppercase;letter-spacing:.09em;color:var(--mu);margin:44px 0 12px}
-.sub{color:var(--mu);margin:0 0 18px}
+main{max-width:980px;margin:0 auto;padding:28px 16px 48px}
+h1{font-size:26px;margin:0 0 2px;letter-spacing:-.01em}
+h2{font:600 13px/1 -apple-system,system-ui,sans-serif;text-transform:uppercase;letter-spacing:.09em;color:var(--mu);margin:20px 0 6px}
+.sub{color:var(--mu);margin:0 0 12px}
 a{color:var(--ac);text-decoration:none}a:hover{text-decoration:underline}
 .list a,.sub a{font-weight:600}
 .sans{font-family:-apple-system,system-ui,sans-serif}
-.list{margin:0;padding:0;list-style:none;font-size:16px}
-.list li{padding:7px 0;border-bottom:1px solid var(--bd)}
-.list span{color:var(--mu);font-size:14.5px}
-.works{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px}
+.list{margin:0;padding:0;list-style:none;font-size:15px}
+.list li{display:flex;gap:14px;padding:0;line-height:1.35;white-space:nowrap}
+.list a{flex:0 0 200px}
+.list span{color:var(--mu);font-size:14px;overflow:hidden;text-overflow:ellipsis;min-width:0}
+@media(max-width:700px){.list li{display:block;white-space:normal}.list a{display:inline}.list span{display:block}}
+.works{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:6px 8px}
 .works a{display:block;color:var(--ac);font:13.5px/1.3 -apple-system,system-ui,sans-serif}
 .works img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:6px;border:1px solid var(--bd);background:var(--card)}
-.works span{display:block;margin-top:4px}
+.works span{display:block;margin-top:2px;line-height:1.2}
 .works small{color:var(--mu)}
-footer{margin-top:50px}
+footer{margin-top:26px}
 .icons{display:flex;gap:18px}.icons a{display:inline-flex;color:var(--mu)}.icons a:hover{color:var(--ac);text-decoration:none}
 </style>
 </head>
@@ -40,15 +42,14 @@ footer{margin-top:50px}
 
 <h2>Selected projects</h2>
 <ul class="list">
-  <li><a href="https://github.com/languel/artistmodelstudio">Artist Model Studio</a><br><span>A creative-coding studio for teaching models to draw through a visible, staged process; every mark has a reason and an author.</span></li>
-  <li><a href="https://github.com/languel/p5comp">p5comp</a><br><span>Arduino and p5.js classroom workbench: circuits, simulation, serial and live code.</span></li>
-  <li><a href="https://github.com/languel/genereti">Genereti</a><br><span>Realtime creative coding and performance tools for ComfyUI.</span></li>
-  <li><a href="https://github.com/languel/threegrease">threegrease</a><br><span>Blender-style Grease Pencil in three.js, a base for interactive action painting.</span></li>
-  <li><a href="https://github.com/languel/threejslessons">Three.js for body and sound</a><br><span>Ten lessons from a spinning cube to MediaPipe body tracking, depth, a laser harp and gesture painting.</span></li>
-  <li><a href="https://github.com/languel/IanniX">IanniX</a><br><span>My fork of the graphical open-source sequencer after Iannis Xenakis (original by Buzzing Light).</span></li>
-  <li><a href="https://github.com/languel/mediamime">mediamime</a><br><span>Custom MediaPipe triggers to MIDI events.</span></li>
+  <li><a href="https://github.com/languel/artistmodelstudio">Artist Model Studio</a><span>Teaching models to draw through a visible, staged process with reasons for every mark</span></li>
+  <li><a href="https://github.com/languel/p5comp">p5comp</a><span>Arduino and p5.js classroom workbench: circuits, simulation, serial, live code</span></li>
+  <li><a href="https://github.com/languel/genereti">Genereti</a><span>Realtime creative coding and performance tools for ComfyUI</span></li>
+  <li><a href="https://github.com/languel/threegrease">threegrease</a><span>Blender-style Grease Pencil in three.js, a base for interactive action painting</span></li>
+  <li><a href="https://github.com/languel/threejslessons">Three.js for body and sound</a><span>Ten lessons from a spinning cube to body tracking, depth and gesture painting</span></li>
+  <li><a href="https://github.com/languel/IanniX">IanniX</a><span>My fork of the graphical sequencer after Xenakis (original by Buzzing Light)</span></li>
+  <li><a href="https://github.com/languel/mediamime">mediamime</a><span>Custom MediaPipe triggers to MIDI events</span></li>
 </ul>
-<p class="sans" style="font-size:15px;margin-top:12px"><a href="https://github.com/languel">All repositories on GitHub →</a></p>
 
 <h2>Selected works</h2>
 <div class="works">
