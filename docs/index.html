@@ -9,7 +9,7 @@
 :root{--bg:#fbfaf7;--fg:#3b3b3b;--mu:#707070;--bd:#dedbd3;--ac:#000;--card:#fff}
 @media(prefers-color-scheme:dark){:root{--bg:#141417;--fg:#c4c4c8;--mu:#8e8e96;--bd:#2f2f37;--ac:#fff;--card:#1c1c21}}
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.55 Georgia,"Times New Roman",serif}
+body{margin:0;background:var(--bg);color:var(--fg);font:16.5px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif}
 main{max-width:760px;margin:0 auto;padding:40px 16px 80px}
 h1{font-size:30px;margin:0 0 2px;letter-spacing:-.01em}
 h2{font:600 13px/1 -apple-system,system-ui,sans-serif;text-transform:uppercase;letter-spacing:.09em;color:var(--mu);margin:44px 0 12px}
@@ -25,7 +25,8 @@ a{color:var(--ac);text-decoration:none}a:hover{text-decoration:underline}
 .works img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:6px;border:1px solid var(--bd);background:var(--card)}
 .works span{display:block;margin-top:4px}
 .works small{color:var(--mu)}
-footer{margin-top:50px;color:var(--mu);font:13px -apple-system,system-ui,sans-serif}
+footer{margin-top:50px}
+.icons{display:flex;gap:18px}.icons a{display:inline-flex;color:var(--mu)}.icons a:hover{color:var(--ac);text-decoration:none}
 </style>
 </head>
 <body>
@@ -49,7 +50,7 @@ footer{margin-top:50px;color:var(--mu);font:13px -apple-system,system-ui,sans-se
 </ul>
 <p class="sans" style="font-size:15px;margin-top:12px"><a href="https://github.com/languel">All repositories on GitHub →</a></p>
 
-<h2>Works</h2>
+<h2>Selected works</h2>
 <div class="works">
   <a href="https://liuboto.myportfolio.com/bee-drawings"><img src="img/bee-drawings.jpg" alt="" loading="lazy"><span>Bee drawings</span></a>
   <a href="https://liuboto.myportfolio.com/landfall"><img src="img/landfall.jpg" alt="" loading="lazy"><span>Landfall</span></a>
@@ -63,9 +64,11 @@ footer{margin-top:50px;color:var(--mu);font:13px -apple-system,system-ui,sans-se
   <a href="https://liuboto.myportfolio.com/bohor"><img src="img/bohor.jpg" alt="" loading="lazy"><span>Bohor</span></a>
   <a href="https://liuboto.myportfolio.com/selected-works-2000-2012"><img src="img/early-works.jpg" alt="" loading="lazy"><span>Early works</span></a>
 </div>
-<p class="sans" style="font-size:15px;margin-top:12px"><a href="https://liuboto.myportfolio.com/">Full portfolio →</a> · <a href="https://vimeo.com/liubo">Vimeo</a></p>
 
-<footer>lborisso@pratt.edu · <a href="https://github.com/languel">github.com/languel</a></footer>
+<footer class="icons"><a href="https://github.com/languel" aria-label="GitHub" title="GitHub"><svg viewBox="0 0 16 16" width="20" height="20" aria-hidden="true" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.5 7.5 0 014 0c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0016 8c0-4.42-3.58-8-8-8z"/></svg></a><a href="#" id="em" data-u="lborisso" data-d="pratt.edu" rel="nofollow" aria-label="Email" title="Email"><svg viewBox="0 0 16 16" width="20" height="20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"><rect x="1.5" y="3" width="13" height="10" rx="1.5"/><path d="M2 4l6 5 6-5"/></svg></a></footer>
 </main>
+<script>
+document.getElementById('em').addEventListener('click',function(){this.href='mailto:'+this.dataset.u+'@'+this.dataset.d;this.title=this.dataset.u+'@'+this.dataset.d;},{once:true});
+</script>
 </body>
 </html>
