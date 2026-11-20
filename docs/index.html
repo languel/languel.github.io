@@ -18,10 +18,14 @@ a{color:var(--ac);text-decoration:none}a:hover{text-decoration:underline}
 .list a,.sub a{font-weight:600}
 .sans{font-family:-apple-system,system-ui,sans-serif}
 .list{margin:0;padding:0;list-style:none;font-size:15px}
-.list li{display:flex;gap:14px;padding:0;line-height:1.35;white-space:nowrap}
-.list a{flex:0 0 200px}
-.list span{color:var(--mu);font-size:14px;overflow:hidden;text-overflow:ellipsis;min-width:0}
-@media(max-width:700px){.list li{display:block;white-space:normal}.list a{display:inline}.list span{display:block}}
+.list li{display:grid;grid-template-columns:76px 150px minmax(0,1fr);align-items:center;gap:0 14px;padding:4px 0;line-height:1.35}
+.list img{display:block;width:100%;height:auto;border:1px solid var(--bd);border-radius:5px;background:var(--card)}
+.list span{color:var(--mu);font-size:14px}
+@media(max-width:700px){
+  .list li{grid-template-columns:64px minmax(0,1fr);grid-template-rows:auto auto;row-gap:3px;padding:5px 0}
+  .list img{grid-row:1 / span 2}
+  .list a,.list span{grid-column:2}
+}
 .works{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:6px 8px}
 .works a{display:block;color:var(--ac);font:13.5px/1.3 -apple-system,system-ui,sans-serif}
 .works img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:6px;border:1px solid var(--bd);background:var(--card)}
@@ -38,17 +42,40 @@ footer{margin-top:26px}
 
 <p>I make interactive, audiovisual and mixed-reality work and the tools to make it, and I teach creative coding, physical computing, mixed realities and creative practice with AI. I trained as a physicist (Ph.D., Columbia) and an interactive-media artist (NYU ITP).</p>
 
-<p>Current research interests include means and measures of creativity.</p>
+<p>Current research interests focus on means and measures of creativity.</p>
 
 <h2>Selected projects</h2>
 <ul class="list">
-  <li><a href="https://github.com/languel/artistmodelstudio">Artist Model Studio</a><span>Teaching models to draw through a visible, staged process with reasons for every mark</span></li>
-  <li><a href="https://github.com/languel/p5comp">p5comp</a><span>Arduino and p5.js classroom workbench: circuits, simulation, serial, live code</span></li>
-  <li><a href="https://github.com/languel/genereti">Genereti</a><span>Realtime creative coding and performance tools for ComfyUI</span></li>
-  <li><a href="https://github.com/languel/threegrease">threegrease</a><span>Blender-style Grease Pencil in three.js, a base for interactive action painting</span></li>
-  <li><a href="https://github.com/languel/threejslessons">Three.js for body and sound</a><span>Ten lessons from a spinning cube to body tracking, depth and gesture painting</span></li>
-  <li><a href="https://github.com/languel/IanniX">IanniX</a><span>My fork of the graphical sequencer after Xenakis (original by Buzzing Light)</span></li>
-  <li><a href="https://github.com/languel/mediamime">mediamime</a><span>Custom MediaPipe triggers to MIDI events</span></li>
+  <li>
+    <img src="img/projects/artist-model-studio.webp" alt="" width="76" height="48">
+    <a href="https://github.com/languel/artistmodelstudio">Artist Model Studio</a>
+    <span>Teaching models to draw through a visible, staged process with reasons for every mark</span>
+  </li>
+  <li>
+    <img src="img/projects/p5comp.webp" alt="" width="76" height="48">
+    <a href="https://github.com/languel/p5comp">p5comp</a>
+    <span>Arduino and p5.js classroom workbench: circuits, simulation, serial, live code</span>
+  </li>
+  <li>
+    <img src="img/projects/genereti.webp" alt="" width="76" height="48">
+    <a href="https://github.com/languel/genereti">Genereti</a>
+    <span>Realtime creative coding and performance tools for ComfyUI</span>
+  </li>
+  <li>
+    <img src="img/projects/threeditor.webp" alt="" width="76" height="48">
+    <a href="https://github.com/languel/threeditor">threeditor</a>
+    <span>A three.js workspace for staging scenes, editing JavaScript, and publishing standalone projects</span>
+  </li>
+  <li>
+    <img src="img/projects/iannix.webp" alt="" width="76" height="48">
+    <a href="https://github.com/languel/IanniX">IanniX</a>
+    <span>My fork of the graphical sequencer after Xenakis (original by Buzzing Light)</span>
+  </li>
+  <li>
+    <img src="img/projects/seloai.webp" alt="" width="76" height="48">
+    <a href="https://github.com/languel/seloai">seloai</a>
+    <span>A browser-based village simulation for emergent storytelling, with AI characters and adaptive music</span>
+  </li>
 </ul>
 
 <h2>Selected works</h2>
